@@ -4,4 +4,4 @@
 
 Throw in some red and yellow to your console with the minimum of code - 
 
-patches `console.error` and `console.warn` to use red and yellow colors.
+it patches `console.error` and `console.warn` to use red and yellow colors.
