@@ -16,5 +16,4 @@ and will be colored after you add `manakin`:
 console = require('manakin');
 ```
 
-/ minimum of code / no dependencies / for Node.js only.
-
+minimum code **/** no dependencies **/** for Node.js only
