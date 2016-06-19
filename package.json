@@ -2,9 +2,9 @@
   "name": "manakin",
   "version": "0.0.2",
   "description": "Basic colors for your console",
-  "main": "index.js",
+  "main": "manakin.js",
   "files": [
-    "index.js"
+    "manakin.js"
   ],
   "homepage": "https://github.com/vitaly-t/manakin",
   "repository": {
