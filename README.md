@@ -17,13 +17,17 @@ require('manakin');
 
 minimum code &#10004; no dependencies &#10004; uni-platform &#10004;
 
-## Installing
+---
+
+
+
+#### Installing
 
 ```
 $ npm install manakin --save
 ```
 
-## License
+#### License
 
 Copyright © 2016 [Vitaly Tomilov](https://github.com/vitaly-t);
 Released under the MIT license.
