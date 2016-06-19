@@ -1,6 +1,5 @@
 # manakin
 
-
 <img align="left" width="218" height="298" src="https://s31.postimg.org/y3s1ucqor/manakin.jpg">
 
 Throw in some red and yellow to your console with the minimum of code - 
@@ -16,4 +15,4 @@ and will be colored after you add `manakin`:
 require('manakin');
 ```
 
-minimum code &#10004; no dependencies &#10004; for Node.js only &#10004;
+minimum code &#10004; no dependencies &#10004; uni-platform &#10004;

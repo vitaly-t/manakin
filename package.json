@@ -1,0 +1,34 @@
+{
+  "name": "manakin",
+  "version": "0.0.1",
+  "description": "Basic colors for your console",
+  "main": "lib/index.js",
+  "homepage": "https://github.com/vitaly-t/manakin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitaly-t/manakin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vitaly-t/manakin/issues",
+    "email": "vitaly.tomilov@gmail.com"
+  },
+  "keywords": [
+    "color",
+    "console",
+    "console error",
+    "console warning"
+  ],
+  "author": {
+    "name": "Vitaly Tomilov",
+    "email": "vitaly.tomilov@gmail.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10",
+    "npm": ">=1.4"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
