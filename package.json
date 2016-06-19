@@ -1,6 +1,6 @@
 {
   "name": "manakin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Basic colors for your console",
   "main": "manakin.js",
   "files": [

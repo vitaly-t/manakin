@@ -6,7 +6,7 @@ Throw in some red and yellow to your console with the minimum of code -
 
 it patches `console.error` and `console.warn` to use red and yellow colors.
 
---
+---
 
 You can start using it without using it: the default `console.error` and `console.warn` are always there,
 and will be colored after you add `manakin`:
@@ -18,8 +18,6 @@ require('manakin');
 minimum code &#10004; no dependencies &#10004; uni-platform &#10004;
 
 ---
-
-
 
 #### Installing
 
