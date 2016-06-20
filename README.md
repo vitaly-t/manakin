@@ -8,7 +8,7 @@ Red & Yellow colors for your `console.error` and `console.warn` messages.
 
 You can use the existing `console.error` + `console.warn`, and add `manakin` for colors later.
 
-<br/>
+<br/><br/>
 
 minimum code &#10004; no dependencies &#10004; uni-platform &#10004;
 
