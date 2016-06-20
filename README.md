@@ -11,9 +11,11 @@ it patches `console.error` and `console.warn` to use red and yellow colors.
 You can start using it without using it: the default `console.error` and `console.warn` are already there,
 and will be colored after you add `manakin`.
 
+<br/>
+
 minimum code &#10004; no dependencies &#10004; uni-platform &#10004;
 
-<br/><br/><br/>
+<br/><br/>
 
 #### Installing
 
