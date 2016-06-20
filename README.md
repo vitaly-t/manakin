@@ -25,6 +25,30 @@ minimum code &#10004; no dependencies &#10004; uni-platform &#10004;
 $ npm install manakin --save
 ```
 
+#### Including
+
+* Node.js:
+```js
+require('manakin');
+```
+
+* Browsers:
+```js
+<script src="manakin.js"></script>
+```
+
+#### Using
+
+```js
+// display a warning:
+console.warn(val1, val2, ...);
+
+// display a error:
+console.error(val1, val2, ...);
+```
+
+If your browser doesn't support `console.error` or `console.warn`, they will be added.
+
 #### License
 
 Copyright © 2016 [Vitaly Tomilov](https://github.com/vitaly-t);

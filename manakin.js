@@ -2,20 +2,48 @@
 
 (function () {
 
-    var error = console.error, warn = console.warn;
+    if (typeof module !== "undefined" && module.exports) {
 
-    console.error = function () {
-        var a = arguments;
-        error.apply(this, Object.keys(a).map(function (key) {
-            return "\u001b[31m" + a[key] + "\u001b[0m";
-        }));
-    };
+        var inspect = require('util').inspect;
 
-    console.warn = function () {
-        var a = arguments;
-        warn.apply(this, Object.keys(a).map(function (key) {
-            return "\u001b[33m" + a[key] + "\u001b[0m";
-        }));
-    };
+        var format = function (values, color) {
+            if (process.stdout.isTTY) {
+                return Object.keys(values).map(function (key) {
+                    return "\u001b[" + color + inspect(values[key]) + "\u001b[0m";
+                });
+            }
+            return values;
+        };
 
+        console.error = function () {
+            console.log.apply(this, format(arguments, '31m'));
+        };
+
+        console.warn = function () {
+            console.log.apply(this, format(arguments, '33m'));
+        };
+
+    } else {
+
+        var inspect = function (value) {
+            return JSON.stringify(value).replace(/^"|"$/g, '');
+        };
+
+        var format = function (values, color) {
+            return ['%c' + Object.keys(values).map(function (key) {
+                return inspect(values[key]);
+            }).join(' '), "color:" + color];
+        };
+
+        var error = console.error === "undefined" ? console.log : console.error,
+            warn = console.warn === "undefined" ? console.log : console.warn;
+
+        console.error = function () {
+            error.apply(this, format(arguments, 'red'));
+        };
+
+        console.warn = function () {
+            warn.apply(this, format(arguments, 'darkorange'));
+        };
+    }
 })();
