@@ -13,7 +13,7 @@ and will be colored after you add `manakin`.
 
 minimum code &#10004; no dependencies &#10004; uni-platform &#10004;
 
----
+<br/><br/><br/>
 
 #### Installing
 
