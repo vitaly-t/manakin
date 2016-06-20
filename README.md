@@ -10,7 +10,7 @@ You can start using the existing `console.error` + `console.warn` methods, and t
 <br/><br/>
 You can either set colors globally, for the entire process, or use them locally.
 
-<br/><br/>
+<br/>
 
 minimum code &#10004; no dependencies &#10004; uni-platform &#10004;
 
