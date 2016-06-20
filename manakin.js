@@ -4,7 +4,7 @@
 
     if (typeof module !== "undefined" && module.exports) {
 
-        var util = require('util');
+        var exp = module.exports, util = require('util');
 
         var inspect = function (value, isMsg) {
             return (isMsg && typeof value === 'string') ? value : util.inspect(value);
@@ -26,13 +26,36 @@
             return values;
         };
 
-        console.error = function () {
-            console.log.apply(this, format(arguments, '31m'));
+        var write = {
+            error: function () {
+                console.log.apply(this, format(arguments, '31m'));
+            },
+            warn: function () {
+                console.log.apply(this, format(arguments, '33m'));
+            }
         };
+        
+        Object.defineProperty(exp, 'local', {
+            get: function () {
+                return write;
+            },
+            enumerable: true
+        });
+        
+        Object.defineProperty(exp, 'global', {
+            get: function () {
+                console.error = write.error;
+                console.warn = write.warn;
+                return write;
+            },
+            enumerable: true
+        });
 
-        console.warn = function () {
-            console.log.apply(this, format(arguments, '33m'));
-        };
+        exp.error = write.error;
+        exp.warn = write.warn;
+
+        Object.freeze(write);
+        Object.freeze(exp);
 
     } else {
 

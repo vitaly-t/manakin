@@ -2,14 +2,11 @@
 
 <img align="left" width="218" height="298" src="https://s31.postimg.org/y3s1ucqor/manakin.jpg" alt="Wire-tailed manakin">
 
-Throw in some red and yellow to your console with the minimum of code - 
-
-it patches `console.error` and `console.warn` to use red and yellow colors.
+Red & Yellow colors for your `console.error` and `console.warn` messages.
 
 ---
 
-You can start using it without using it: the default `console.error` and `console.warn` are already there,
-and will be colored after you add `manakin`.
+You can use the existing `console.error` + `console.warn`, and add `manakin` for colors later.
 
 <br/>
 
@@ -25,9 +22,26 @@ $ npm install manakin --save
 
 #### Usage
 
-_Node.js:_
+_Node.js_
+
+* For global usage:
+
 ```js
-require('manakin');
+require('manakin').global; // also returns {error, warn};
+
+console.warn(val1, val2, ...);
+
+console.error(val1, val2, ...);
+```
+
+* For local usage:
+
+```js
+var con = require('manakin'); // = require('manakin').local; 
+
+con.warn(val1, val2, ...);
+
+con.error(val1, val2, ...);
 ```
 
 _Browsers:_
@@ -35,16 +49,7 @@ _Browsers:_
 <script src="manakin.js"></script>
 ```
 
-_Examples:_
-
-```js
-console.warn(val1, val2, ...);
-
-console.error(val1, val2, ...);
-```
-
-* It Node.js, it overrides the console methods globally - for the entire process 
-* In browsers, it sets `console.error` and `console.warn` only when they are undefined.
+In browsers, we set `console.error` and `console.warn` only when they are not defined.
 
 #### License
 
