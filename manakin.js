@@ -4,12 +4,17 @@
 
     if (typeof module !== "undefined" && module.exports) {
 
-        var inspect = require('util').inspect;
+        var util = require('util');
+
+        var inspect = function (value, isMsg) {
+            return (isMsg && typeof value === 'string') ? value : util.inspect(value);
+        };
 
         var format = function (values, color) {
             if (process.stdout.isTTY) {
+                var isMsg = values.length && typeof values[0] === 'string';
                 return Object.keys(values).map(function (key) {
-                    return "\u001b[" + color + inspect(values[key]) + "\u001b[0m";
+                    return "\u001b[" + color + inspect(values[key], isMsg) + "\u001b[0m";
                 });
             }
             return values;
@@ -34,7 +39,7 @@
                 return inspect(values[key]);
             }).join(' '), "color:" + color];
         };
-        
+
         if (typeof console.error === "undefined") {
             console.error = function () {
                 console.log.apply(this, format(arguments, 'red'));
