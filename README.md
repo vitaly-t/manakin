@@ -38,10 +38,8 @@ _Browsers:_
 _Example:_
 
 ```js
-// display a warning:
 console.warn(val1, val2, ...);
 
-// display a error:
 console.error(val1, val2, ...);
 ```
 
