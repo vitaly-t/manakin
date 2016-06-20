@@ -14,7 +14,7 @@ You can either set colors globally, for the entire process, or use them locally.
 
 minimum code &#10004; no dependencies &#10004; uni-platform &#10004;
 
-<br/><br/>
+<br/>
 
 #### Installing
 
