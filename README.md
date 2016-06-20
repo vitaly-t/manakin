@@ -45,7 +45,7 @@ console.warn(val1, val2, ...);
 console.error(val1, val2, ...);
 ```
 
-And if your browser doesn't support `console.error` or `console.warn`, they will be added.
+It also acts as a shim for browsers that do not have `console.error` or `console.warn`.
 
 #### License
 
