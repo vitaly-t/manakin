@@ -45,7 +45,7 @@ console.warn(val1, val2, ...);
 console.error(val1, val2, ...);
 ```
 
-It also acts as a shim for browsers that do not have `console.error` or `console.warn`.
+In browsers, it sets `console.error` and `console.warn` only when they are undefined.
 
 #### License
 

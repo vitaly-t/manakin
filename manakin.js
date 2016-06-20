@@ -34,16 +34,17 @@
                 return inspect(values[key]);
             }).join(' '), "color:" + color];
         };
+        
+        if (typeof console.error === "undefined") {
+            console.error = function () {
+                console.log.apply(this, format(arguments, 'red'));
+            };
+        }
 
-        var error = console.error === "undefined" ? console.log : console.error,
-            warn = console.warn === "undefined" ? console.log : console.warn;
-
-        console.error = function () {
-            error.apply(this, format(arguments, 'red'));
-        };
-
-        console.warn = function () {
-            warn.apply(this, format(arguments, 'darkorange'));
-        };
+        if (typeof console.warn === "undefined") {
+            console.warn = function () {
+                console.log.apply(this, format(arguments, 'darkorange'));
+            };
+        }
     }
 })();
