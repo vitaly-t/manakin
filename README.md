@@ -35,7 +35,7 @@ _Browsers:_
 <script src="manakin.js"></script>
 ```
 
-_Example:_
+_Examples:_
 
 ```js
 console.warn(val1, val2, ...);
