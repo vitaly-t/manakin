@@ -13,7 +13,7 @@
         var colorize = function (value, color, isMsg) {
             return "\u001b[" + color + inspect(value, isMsg) + "\u001b[0m";
         };
-
+        
         var format = function (values, color) {
             if (process.stdout.isTTY) {
                 if (values.length && typeof values[0] === 'string') {
@@ -34,14 +34,14 @@
                 console.log.apply(this, format(arguments, '33m'));
             }
         };
-        
+
         Object.defineProperty(exp, 'local', {
             get: function () {
                 return write;
             },
             enumerable: true
         });
-        
+
         Object.defineProperty(exp, 'global', {
             get: function () {
                 console.error = write.error;
