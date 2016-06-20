@@ -12,7 +12,7 @@ You can either set colors globally, for the entire process, or use them locally.
 
 <br/>
 
-minimum code &#10004; no dependencies &#10004; uni-platform &#10004;
+minimum code &#10004; no dependencies &#10004; all platform &#10004;
 
 <br/>
 
