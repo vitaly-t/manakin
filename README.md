@@ -6,7 +6,9 @@ Red & Yellow colors for your `console.error` and `console.warn` messages.
 
 ---
 
-You can use the existing `console.error` + `console.warn`, and add `manakin` for colors later.
+You can start using the existing `console.error` + `console.warn` methods, and then add `manakin` later at any time.
+<br/><br/>
+You can either set colors globally, for the entire process, or use them locally.
 
 <br/><br/><br/>
 
