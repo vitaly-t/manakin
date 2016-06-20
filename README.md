@@ -43,7 +43,10 @@ console.warn(val1, val2, ...);
 console.error(val1, val2, ...);
 ```
 
-In browsers, it sets `console.error` and `console.warn` only when they are undefined.
+**NOTES:**
+
+* It Node.js, it overrides the console methods globally - for the entire process 
+* In browsers, it sets `console.error` and `console.warn` only when they are undefined.
 
 #### License
 
