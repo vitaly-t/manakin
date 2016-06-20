@@ -8,12 +8,8 @@ it patches `console.error` and `console.warn` to use red and yellow colors.
 
 ---
 
-You can start using it without using it: the default `console.error` and `console.warn` are always there,
-and will be colored after you add `manakin`:
-
-```js
-require('manakin');
-```
+You can start using it without using it: the default `console.error` and `console.warn` are already there,
+and will be colored after you add `manakin`.
 
 minimum code &#10004; no dependencies &#10004; uni-platform &#10004;
 
@@ -47,7 +43,7 @@ console.warn(val1, val2, ...);
 console.error(val1, val2, ...);
 ```
 
-If your browser doesn't support `console.error` or `console.warn`, they will be added.
+And if your browser doesn't support `console.error` or `console.warn`, they will be added.
 
 #### License
 
