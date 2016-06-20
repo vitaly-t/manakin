@@ -6,15 +6,21 @@
 
         var util = require('util');
 
-        var inspect = function (value, isMsg) {
-            return (isMsg && typeof value === 'string') ? value : util.inspect(value);
+        var inspect = function (value) {
+            return typeof value === 'string' ? value : util.inspect(value);
+        };
+
+        var colorize = function (value, color) {
+            return "\u001b[" + color + inspect(value) + "\u001b[0m";
         };
 
         var format = function (values, color) {
             if (process.stdout.isTTY) {
-                var isMsg = values.length && typeof values[0] === 'string';
+                if (values.length && typeof values[0] === 'string') {
+                    return [colorize(util.format.apply(this, values), color)];
+                }
                 return Object.keys(values).map(function (key) {
-                    return "\u001b[" + color + inspect(values[key], isMsg) + "\u001b[0m";
+                    return colorize(values[key], color);
                 });
             }
             return values;
