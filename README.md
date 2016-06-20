@@ -23,7 +23,7 @@ minimum code &#10004; no dependencies &#10004; uni-platform &#10004;
 $ npm install manakin --save
 ```
 
-#### Including
+#### Usage
 
 Node.js:
 ```js
@@ -35,7 +35,7 @@ Browsers:
 <script src="manakin.js"></script>
 ```
 
-#### Using
+Example:
 
 ```js
 // display a warning:
