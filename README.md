@@ -25,12 +25,12 @@ $ npm install manakin --save
 
 #### Including
 
-* Node.js:
+Node.js:
 ```js
 require('manakin');
 ```
 
-* Browsers:
+Browsers:
 ```js
 <script src="manakin.js"></script>
 ```
