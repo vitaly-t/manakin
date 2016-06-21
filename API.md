@@ -26,9 +26,9 @@ Setting bright colors:
 ```js
 var con = require('manakin').global;
 
-con.log.bright = true; // use bright white for `console.log`;
-con.warn.bright = true; // use bright yellow for `console.warn`;
-con.error.bright = true; // use bright red for `console.error`;
+con.log.bright = true; // use bright white for `console.log`
+con.warn.bright = true; // use bright yellow for `console.warn`
+con.error.bright = true; // use bright red for `console.error`
 ```
 
 ### local
@@ -48,9 +48,9 @@ Setting bright colors:
 ```js
 var con = require('manakin').local;
 
-con.log.bright = true; // use bright white for `con.log`;
-con.warn.bright = true; // use bright yellow for `con.warn`;
-con.error.bright = true; // use bright red for `con.error`;
+con.log.bright = true; // use bright white for `con.log`
+con.warn.bright = true; // use bright yellow for `con.warn`
+con.error.bright = true; // use bright red for `con.error`
 ```
 
 ### shared
@@ -70,9 +70,9 @@ Setting bright colors for the module:
 ```js
 var con = require('manakin');
 
-con.log.bright = true; // use bright white for `con.log`;
-con.warn.bright = true; // use bright yellow for `con.warn`;
-con.error.bright = true; // use bright red for `con.error`;
+con.log.bright = true; // use bright white for `con.log`
+con.warn.bright = true; // use bright yellow for `con.warn`
+con.error.bright = true; // use bright red for `con.error`
 ```
 
 [&lt;&lt; Main Page](https://github.com/vitaly-t/manakin)

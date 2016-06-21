@@ -23,7 +23,7 @@ minimum code &#10004; no dependencies &#10004;
 <br/><br/>
 What is great about this library - the output format is 100% consistent with `console.log` in Node.js. 
 
-It means that changing colors for `console.error` and `console.warn` does not affect [their rich syntax](https://developer.mozilla.org/en-US/docs/Web/API/Console/log).
+It means that changing colors for `console` methods not affect [their rich syntax](https://developer.mozilla.org/en-US/docs/Web/API/Console/log) or output format.
 
 This is what makes this library stand out from all the libraries that do color console output, because they can only apply
 colors to a simple text string, while this library focuses on keeping the output format exactly as Node.js does it for `console.log`. 
