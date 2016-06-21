@@ -2,6 +2,8 @@
 
 (function () {
 
+    // code coverage includes the Node.js version only:
+    // istanbul ignore else
     if (typeof module !== "undefined" && module.exports) {
 
         var exp = module.exports, util = require('util');
@@ -13,7 +15,7 @@
         var colorize = function (value, color, isMsg) {
             return "\u001b[" + color + inspect(value, isMsg) + "\u001b[0m";
         };
-        
+
         var format = function (values, color) {
             if (process.stdout.isTTY) {
                 if (values.length && typeof values[0] === 'string') {

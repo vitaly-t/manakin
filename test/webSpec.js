@@ -1,3 +1,8 @@
-/**
- * Created by Vitaly on 6/20/2016.
- */
+'use strict';
+
+var lib = require('../manakin');
+var capture = require('./capture');
+
+describe("formatting", function () {
+
+});
