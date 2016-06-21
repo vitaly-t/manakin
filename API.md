@@ -66,6 +66,9 @@ con.warn.bright = true; // use bright yellow for the shared object;
 con.error.bright = true; // use bright red for the shared object;
 ```
 
+[&lt;&lt; Back to the main page](README.md)
+
+
 [global]:#global  
 [local]:#local
 [shared]:#shared

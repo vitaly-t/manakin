@@ -1,6 +1,6 @@
 {
   "name": "manakin",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Prime colors for your console",
   "main": "lib/index.js",
   "scripts": {
