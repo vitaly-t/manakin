@@ -31,13 +31,13 @@ or the output format.
 This is what makes this library stand out from all the libraries that do color console output, because they can only apply
 colors to a simple text string, while this library focuses on keeping the output format exactly as Node.js does it for `console.log`. 
 
-### Installing
+## Installing
 
 ```
 $ npm install manakin --save
 ```
 
-### Usage
+## Usage
 
 There are three ways in which the library can be used:
 
@@ -45,7 +45,7 @@ There are three ways in which the library can be used:
 * [local] - creates a new object for local usage, without affecting anything globally 
 * [shared] - uses the same, module-wide object
 
-##### global
+#### global
 
 Using colors globally for `console.warn` and `console.error`:
 
@@ -65,7 +65,7 @@ con.warn.bright = true; // use bright yellow for all warnings in the process;
 con.error.bright = true; // use bright red for all errors in the process;
 ```
 
-##### local
+#### local
 
 Using color output with a locally created object:
 
@@ -85,7 +85,7 @@ con.warn.bright = true; // use bright yellow for the local warnings;
 con.error.bright = true; // use bright red for the local errors;
 ```
 
-##### shared
+#### shared
 
 Using color output with the module-wide object:
 
@@ -105,7 +105,7 @@ con.warn.bright = true; // use bright yellow for the shared object;
 con.error.bright = true; // use bright red for the shared object;
 ```
 
-### License
+## License
 
 Copyright © 2016 [Vitaly Tomilov](https://github.com/vitaly-t);
 Released under the MIT license.
