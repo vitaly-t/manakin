@@ -67,6 +67,8 @@ con.error.bright = true; // use bright red for all errors in the process;
 
 ##### local
 
+Using color output with a locally created object:
+
 ```js
 var con = require('manakin').local; // returns a new object for local usage 
 
@@ -84,6 +86,8 @@ con.error.bright = true; // use bright red for the local errors;
 ```
 
 ##### shared
+
+Using color output with the module-wide object:
 
 ```js
 var con = require('manakin'); // returns the shared/root object 
