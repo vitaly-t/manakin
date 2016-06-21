@@ -86,10 +86,10 @@ con.error.bright = true; // use bright red for the local errors;
 ##### shared
 
 ```js
-var con = require('manakin'); // returns the shared object 
+var con = require('manakin'); // returns the shared/root object 
 
-con.warn(val1, val2, ...);  // yellow output for the shared warnings
-con.error(val1, val2, ...); // red output for the shared errors
+con.warn(val1, val2, ...);  // yellow output for the shared object
+con.error(val1, val2, ...); // red output for the shared object
 ```
 
 Activating bright colors:
@@ -97,8 +97,8 @@ Activating bright colors:
 ```js
 var con = require('manakin');
 
-con.warn.bright = true; // use bright yellow for the shared warnings;
-con.error.bright = true; // use bright red for the shared errors;
+con.warn.bright = true; // use bright yellow for the shared object;
+con.error.bright = true; // use bright red for the shared object;
 ```
 
 ### License
