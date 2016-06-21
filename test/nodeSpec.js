@@ -40,7 +40,8 @@ describe("formatting", function () {
             [obj, obj, obj],
             [123, obj, obj],
             ['some text', obj, 123],
-            ['formatted %s %d %j', 'text', 123, obj]
+            ['formatted %s %d %j', 'text', 123, obj],
+            [1, 'un-formatted %s %d %j', 'text', 123, obj]
         ];
 
         it("must match the regular console output", function () {
