@@ -39,12 +39,18 @@ $ npm install manakin --save
 
 ### Usage
 
+There are three ways in which the library can be used:
+
+* `global` - to set colors for the entire process, and then use `console.warn` and `console.error` directly  
+* `local` - to set colors within a locally created object, without affecting anything globally 
+* `shared` - to set colors for the entire `manakin` module, but without overriding the console
+
 ##### global usage
 
 Using colors globally for `console.warn` and `console.error`:
 
 ```js
-require('manakin').global;
+require('manakin').global; // overrides the console methods
 
 console.warn(val1, val2, ...);  // yellow output for the entire process
 console.error(val1, val2, ...); // red output for the entire process
@@ -62,7 +68,7 @@ con.error.bright = true; // use bright red for all errors in the process;
 ##### local usage
 
 ```js
-var con = require('manakin').local; 
+var con = require('manakin').local; // returns a new object for local usage 
 
 con.warn(val1, val2, ...);  // yellow output for the local warnings
 con.error(val1, val2, ...); // red output for the local errors
@@ -75,6 +81,24 @@ var con = require('manakin').local;
 
 con.warn.bright = true; // use bright yellow for the local warnings;
 con.error.bright = true; // use bright red for the local errors;
+```
+
+##### shared usage
+
+```js
+var con = require('manakin'); // returns the shared object 
+
+con.warn(val1, val2, ...);  // yellow output for the shared warnings
+con.error(val1, val2, ...); // red output for the shared errors
+```
+
+Activating bright colors:
+
+```js
+var con = require('manakin');
+
+con.warn.bright = true; // use bright yellow for the shared warnings;
+con.error.bright = true; // use bright red for the shared errors;
 ```
 
 ### License
