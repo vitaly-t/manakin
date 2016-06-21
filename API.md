@@ -66,7 +66,7 @@ con.warn.bright = true; // use bright yellow for the shared object;
 con.error.bright = true; // use bright red for the shared object;
 ```
 
-[&lt;&lt; Back to the main page](README.md)
+[&lt;&lt; Back to the main page](https://github.com/vitaly-t/manakin)
 
 
 [global]:#global  
