@@ -19,11 +19,15 @@ You can either change colors globally, for the entire process, or use them local
 
 minimum code &#10004; no dependencies &#10004;
 
-<br/>
+<br/><br/>
 
 What is great about this library - the console output is 100% consistent with `console.log` in Node.js. 
 
-It means that changing colors for `console.error` and `console.warn` does not affect their rich syntax.
+It means that changing colors for `console.error` and `console.warn` does not affect [their rich syntax](https://developer.mozilla.org/en-US/docs/Web/API/Console/log).
+
+This is what makes this library stand away from all the libraries that do color console output, because they only format
+a simple text string, while this library keeps the output format exactly as Node.js does it for `console.log`. 
+
 
 #### Installing
 
