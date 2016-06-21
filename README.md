@@ -28,7 +28,7 @@ What is great about this library - the console output is 100% consistent with `c
 It means that changing colors for `console.error` and `console.warn` does not affect [their rich syntax](https://developer.mozilla.org/en-US/docs/Web/API/Console/log).
 
 This is what makes this library stand out from all the libraries that do color console output, because they can only apply
-colors to a simple text string, while this library keeps the output format exactly as Node.js does it for `console.log`. 
+colors to a simple text string, while this library focuses on keeping the output format exactly as Node.js does it for `console.log`. 
 
 #### Installing
 
