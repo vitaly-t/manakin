@@ -17,10 +17,10 @@ change their output color, but never the format.
 <br/>
 You can either change colors globally, for the entire process, or use them locally.
 
-<br/>
+<br/><br/>
 minimum code &#10004; no dependencies &#10004;
 
-<br/><br/><br/>
+<br/><br/>
 What is great about this library - the console output is 100% consistent with `console.log` in Node.js. 
 
 It means that changing colors for `console.error` and `console.warn` does not affect [their rich syntax](https://developer.mozilla.org/en-US/docs/Web/API/Console/log)
@@ -51,7 +51,7 @@ See also: [Full API].
 Copyright © 2016 [Vitaly Tomilov](https://github.com/vitaly-t);
 Released under the MIT license.
 
-[Full API]:#API.md
+[Full API]:API.md
 [global]:#global  
 [local]:#local
 [shared]:#shared
