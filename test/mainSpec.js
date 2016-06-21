@@ -1,12 +1,12 @@
 'use strict';
 
-var lib = require('../manakin');
+var lib = require('../lib');
 var capture = require('./capture');
 
 describe("protocol", function () {
 
     it("must expose complete protocol from the root", function () {
-        expect(Object.keys(lib)).toEqual(['local', 'global', 'error', 'warn']);
+        expect(Object.keys(lib)).toEqual(['error', 'warn', 'local', 'global']);
     });
 
     it("must expose main methods from local", function () {
@@ -68,9 +68,49 @@ describe("formatting", function () {
         it("must match the regular console output", function () {
             var original = capture(console.log, ['hello']);
             var warning = capture(lib.warn, ['hello']);
+            var error = capture(lib.error, ['hello']);
             expect(warning).toBe(original);
+            expect(error).toBe(original);
         });
     });
 
 });
 
+describe("bright colors", function () {
+
+    var con1 = lib.local, con2 = lib.local, values = ['some\ntext'];
+    con1.warn.bright = true;
+    con1.error.bright = true;
+
+    it("must change the colors", function () {
+        var warn1 = capture.call(con1, con1.warn, values, true),
+            warn2 = capture.call(con2, con2.warn, values, true),
+            error1 = capture.call(con1, con1.error, values, true),
+            error2 = capture.call(con2, con2.error, values, true);
+
+        expect(warn1 === warn2).toBe(false);
+        expect(error1 === error2).toBe(false);
+    });
+});
+
+describe("global", function () {
+
+    var glb = lib.global, loc = lib.local, values = ['some\ntext'];
+
+    loc.warn.bright = true;
+    loc.error.bright = true;
+
+    it("must change the colors", function () {
+        var warn1 = capture.call(loc, loc.warn, values, true),
+            warn2 = capture(glb.warn, values, true),
+            error1 = capture.call(loc, loc.error, values, true),
+            error2 = capture(glb.error, values, true);
+
+        expect(warn1 === warn2).toBe(false);
+        expect(error1 === error2).toBe(false);
+    });
+
+    // and this is just for coverage:
+    console.warn();
+    console.error();
+});

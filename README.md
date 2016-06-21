@@ -7,19 +7,23 @@ manakin
 
 <img align="left" width="218" height="298" src="https://s31.postimg.org/y3s1ucqor/manakin.jpg" alt="Wire-tailed manakin">
 
-Red & Yellow colors for your `console.error` and `console.warn` messages.
+Red & Yellow colors for your `console.error` and `console.warn` messages in Node.js.
 
 ---
 
 You can start using the existing `console.error` + `console.warn` methods, and then add `manakin` later at any time.
 <br/><br/>
-You can either set colors globally, for the entire process, or use them locally.
+You can either change colors globally, for the entire process, or use them locally.
 
 <br/>
 
-minimum code &#10004; no dependencies &#10004; all platforms &#10004;
+minimum code &#10004; no dependencies &#10004;
 
 <br/>
+
+What is great about this library - the console output is 100% consistent with `console.log` in Node.js. 
+
+It means that changing colors for `console.error` and `console.warn` does not affect their rich syntax.
 
 #### Installing
 

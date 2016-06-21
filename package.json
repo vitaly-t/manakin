@@ -1,15 +1,15 @@
 {
   "name": "manakin",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Prime colors for your console",
-  "main": "manakin.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jasmine-node test",
     "coverage": "istanbul cover ./node_modules/jasmine-node/bin/jasmine-node test",
     "travis": "istanbul cover ./node_modules/jasmine-node/bin/jasmine-node test --captureExceptions && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "files": [
-    "manakin.js"
+    "lib"
   ],
   "homepage": "https://github.com/vitaly-t/manakin",
   "repository": {

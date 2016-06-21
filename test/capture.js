@@ -22,13 +22,13 @@ function removeColors(text) {
     return text.replace(/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]/g, '');
 }
 
-function capture(method, values) {
+function capture(method, values, keepColors) {
     var text, hook = hookConsole(function (s) {
         text = s;
     });
     method.apply(this, values);
     hook();
-    return removeColors(text);
+    return keepColors ? text : removeColors(text);
 }
 
 module.exports = capture;
