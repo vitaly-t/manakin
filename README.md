@@ -31,44 +31,53 @@ or the output format.
 This is what makes this library stand out from all the libraries that do color console output, because they can only apply
 colors to a simple text string, while this library focuses on keeping the output format exactly as Node.js does it for `console.log`. 
 
-#### Installing
+### Installing
 
 ```
 $ npm install manakin --save
 ```
 
-#### Usage
+### Usage
 
-_Node.js_
+#### global usage
 
-* For global usage:
-
-```js
-require('manakin').global; // also returns {error, warn};
-
-console.warn(val1, val2, ...);
-
-console.error(val1, val2, ...);
-```
-
-* For local usage:
+Using colors globally for `console.warn` and `console.error`:
 
 ```js
-var con = require('manakin'); // = require('manakin').local; 
+require('manakin').global;
 
-con.warn(val1, val2, ...);
-
-con.error(val1, val2, ...);
+console.warn(val1, val2, ...);  // yellow output for the entire process
+console.error(val1, val2, ...); // red output for the entire process
 ```
 
-_Browsers:_
+Activating bright colors:
+
 ```js
-<script src="manakin.js"></script>
+var con = require('manakin').global;
+
+con.warn.bright = true; // use bright yellow for all warnings;
+con.error.bright = true; // use bright red for all errors;
 ```
 
-In browsers, we set `console.error` and `console.warn` only when they are not defined.
+#### local usage
 
-#### License
+```js
+var con = require('manakin').local; 
+
+con.warn(val1, val2, ...);  // yellow output for the 'con' object
+con.error(val1, val2, ...); // red output for the 'con' object
+```
+
+Activating bright colors:
+
+```js
+var con = require('manakin').local;
+
+con.warn.bright = true; // use bright yellow for the 'con' object;
+con.error.bright = true; // use bright red for the 'con' object;
+```
+
+### License
 
 Copyright © 2016 [Vitaly Tomilov](https://github.com/vitaly-t);
 Released under the MIT license.
