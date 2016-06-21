@@ -14,7 +14,7 @@ Red & Yellow colors for your `console.error` and `console.warn` messages in Node
 You can start using the existing `console.error` + `console.warn` methods, and then add `manakin` later, which will only
 change their colors, but never the output format.
 
-<br/><br/>
+<br/>
 You can either change colors globally, for the entire process, or use them locally.
 
 <br/>
