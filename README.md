@@ -54,7 +54,7 @@ console.warn(val1, val2, ...);  // yellow output for the entire process
 console.error(val1, val2, ...); // red output for the entire process
 ```
 
-Using bright colors globally:
+Setting bright colors globally:
 
 ```js
 var con = require('manakin').global;
@@ -74,7 +74,7 @@ con.warn(val1, val2, ...);  // yellow output for the local warnings
 con.error(val1, val2, ...); // red output for the local errors
 ```
 
-Using bright colors locally:
+Setting bright colors locally:
 
 ```js
 var con = require('manakin').local;
@@ -94,7 +94,7 @@ con.warn(val1, val2, ...);  // yellow output for the shared object
 con.error(val1, val2, ...); // red output for the shared object
 ```
 
-Using bright colors:
+Setting bright colors for the module:
 
 ```js
 var con = require('manakin');
