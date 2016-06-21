@@ -28,9 +28,12 @@ describe("formatting", function () {
             method: function () {
             }
         };
-
+        
         var inputs = [
-            ['simple', 'text'],
+            [],
+            [null],
+            [undefined, NaN, -123.456],
+            ['simple', '', 'text', '\t'],
             ['text\nwith \n\n', 'line\nbreaks'],
             [1, 'text\nwith', 'line\nbreaks'],
             [obj],
@@ -49,7 +52,7 @@ describe("formatting", function () {
             });
         });
     });
-
+    
     describe("without isTTY", function () {
         var isTTY;
         beforeEach(function () {
