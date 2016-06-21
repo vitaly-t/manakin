@@ -15,7 +15,7 @@ You can start using the existing `console.error` + `console.warn` methods, and t
 change their output color, but never the format.
 
 <br/>
-You can either change colors globally, for the entire process, or use them locally.
+You can either set colors globally, for the `console` object, or use them locally.
 
 <br/><br/>
 minimum code &#10004; no dependencies &#10004;
@@ -38,7 +38,7 @@ $ npm install manakin --save
 ## Usage
 
 ```js
-require('manakin').global;
+require('manakin').global; // set colors globally
 
 console.warn(val1, val2, ...); // yellow text output
 console.error(val1, val2, ...); // red text output
