@@ -40,8 +40,8 @@ $ npm install manakin --save
 ```js
 require('manakin').global;
 
-console.warn(val1, val2, ...);
-console.error(val1, val2, ...);
+console.warn(val1, val2, ...); // yellow text output
+console.error(val1, val2, ...); // red text output
 ```
 
 See also: [Full API].
