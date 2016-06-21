@@ -39,7 +39,7 @@ $ npm install manakin --save
 
 ### Usage
 
-#### global usage
+##### global usage
 
 Using colors globally for `console.warn` and `console.error`:
 
@@ -50,31 +50,31 @@ console.warn(val1, val2, ...);  // yellow output for the entire process
 console.error(val1, val2, ...); // red output for the entire process
 ```
 
-Activating bright colors:
+Activating bright colors globally:
 
 ```js
 var con = require('manakin').global;
 
-con.warn.bright = true; // use bright yellow for all warnings;
-con.error.bright = true; // use bright red for all errors;
+con.warn.bright = true; // use bright yellow for all warnings in the process;
+con.error.bright = true; // use bright red for all errors in the process;
 ```
 
-#### local usage
+##### local usage
 
 ```js
 var con = require('manakin').local; 
 
-con.warn(val1, val2, ...);  // yellow output for the 'con' object
-con.error(val1, val2, ...); // red output for the 'con' object
+con.warn(val1, val2, ...);  // yellow output for the local warnings
+con.error(val1, val2, ...); // red output for the local errors
 ```
 
-Activating bright colors:
+Activating bright colors locally:
 
 ```js
 var con = require('manakin').local;
 
-con.warn.bright = true; // use bright yellow for the 'con' object;
-con.error.bright = true; // use bright red for the 'con' object;
+con.warn.bright = true; // use bright yellow for the local warnings;
+con.error.bright = true; // use bright red for the local errors;
 ```
 
 ### License
