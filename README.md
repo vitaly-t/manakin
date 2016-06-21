@@ -21,10 +21,9 @@ You can either set colors globally, for the `console` object, or use them locall
 minimum code &#10004; no dependencies &#10004;
 
 <br/><br/>
-What is great about this library - the console output is 100% consistent with `console.log` in Node.js. 
+What is great about this library - the output format is 100% consistent with `console.log` in Node.js. 
 
-It means that changing colors for `console.error` and `console.warn` does not affect [their rich syntax](https://developer.mozilla.org/en-US/docs/Web/API/Console/log)
-or the output format.
+It means that changing colors for `console.error` and `console.warn` does not affect [their rich syntax](https://developer.mozilla.org/en-US/docs/Web/API/Console/log).
 
 This is what makes this library stand out from all the libraries that do color console output, because they can only apply
 colors to a simple text string, while this library focuses on keeping the output format exactly as Node.js does it for `console.log`. 
