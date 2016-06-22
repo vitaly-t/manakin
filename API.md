@@ -87,16 +87,16 @@ The method takes two parameters:
 * list of function arguments
 * standard color code - an integer between 0 and 256 
 
-If no valid color is specified, the method redirects to the default `console.log`.
+If no valid color is specified, the method redirects to the default `console.log`
 
 ```js
-var con = require('manakin').local;
+var con = require('manakin');
 
 function print() {
-    con.write(arguments, 95); // writes using Bright Magenta color
+    con.write(arguments, 35); // writes using Magenta color
 }
 
-print('Color is: %s', 'Bright Magenta');
+print('Color is: %s', 'Magenta');
 ```
 
 The color code can also represent brightness and the background color. For example, `92` - bright green,
@@ -104,7 +104,7 @@ The color code can also represent brightness and the background color. For examp
 
 [&lt;&lt; Main Page](https://github.com/vitaly-t/manakin)
 
-[complete list of color codes]:http://misc.flogisoft.com/bash/tip_colors_and_formatting#colors
+[color codes]:http://misc.flogisoft.com/bash/tip_colors_and_formatting#colors
 [Custom Methods]:#custom-methods
 [global]:#global  
 [local]:#local
