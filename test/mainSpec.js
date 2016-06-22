@@ -6,15 +6,15 @@ var capture = require('./capture');
 describe("protocol", function () {
 
     it("must expose complete protocol from the root", function () {
-        expect(Object.keys(lib)).toEqual(['log', 'error', 'warn', 'local', 'global']);
+        expect(Object.keys(lib)).toEqual(['log', 'error', 'warn', 'write', 'local', 'global']);
     });
 
     it("must expose main methods from local", function () {
-        expect(Object.keys(lib.local)).toEqual(['log', 'error', 'warn']);
+        expect(Object.keys(lib.local)).toEqual(['log', 'error', 'warn', 'write']);
     });
 
     it("must expose main methods from global", function () {
-        expect(Object.keys(lib.global)).toEqual(['log', 'error', 'warn']);
+        expect(Object.keys(lib.global)).toEqual(['log', 'error', 'warn', 'write']);
     });
 
 });
@@ -50,9 +50,11 @@ describe("formatting", function () {
                 var log = capture(lib.log, values);
                 var warning = capture(lib.warn, values);
                 var error = capture(lib.error, values);
+                var write = capture(lib.write, values, false, 'invalid');
                 expect(log).toBe(original);
                 expect(warning).toBe(original);
                 expect(error).toBe(original);
+                expect(write).toBe(original);
             });
         });
     });
@@ -72,9 +74,11 @@ describe("formatting", function () {
             var log = capture(lib.log, ['hello']);
             var warning = capture(lib.warn, ['hello']);
             var error = capture(lib.error, ['hello']);
+            var write = capture(lib.write, ['hello'], false, 'invalid');
             expect(log).toBe(original);
             expect(warning).toBe(original);
             expect(error).toBe(original);
+            expect(write).toBe(original);
         });
     });
 
@@ -115,11 +119,14 @@ describe("global", function () {
             warn1 = capture.call(loc, loc.warn, values, true),
             warn2 = capture(glb.warn, values, true),
             error1 = capture.call(loc, loc.error, values, true),
-            error2 = capture(glb.error, values, true);
+            error2 = capture(glb.error, values, true),
+            write1 = capture(glb.write, values, true, 'invalid'),
+            write2 = capture(glb.write, values, true, 93);
 
         expect(log1 === log2).toBe(false);
         expect(warn1 === warn2).toBe(false);
         expect(error1 === error2).toBe(false);
+        expect(write1 === write2).toBe(false);
     });
 
     // and this is just for coverage:
