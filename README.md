@@ -7,26 +7,22 @@ manakin
 
 <img align="left" width="218" height="298" src="https://s31.postimg.org/y3s1ucqor/manakin.jpg" alt="Wire-tailed manakin">
 
-Red & Yellow colors for your `console.error` and `console.warn` messages in Node.js.
+Errors + Warnings colorization, consistent with [the rich syntax](https://developer.mozilla.org/en-US/docs/Web/API/Console/log) and the output format of console methods in Node.js.
 
 ---
 
-You can start using the existing `console.error` + `console.warn` methods, and then add `manakin` later, which will only
-change their output color, but never the format.
+You can start using the existing `console.error` + `console.warn` methods, and then add `manakin` later, which will only change their output color, but never the format.
 
 <br/>
-You can either set colors globally, for the `console` object, or use them locally.
+Colors can be set either locally, or globally - for the `console` object.
 
 <br/><br/>
-minimum code &#10004; no dependencies &#10004;
+minimal code &#10004; no dependencies &#10004;
 
 <br/><br/>
-What is great about this library - the output format is 100% consistent with `console.log` in Node.js. 
 
-It means that changing colors for the console methods does not affect [their rich syntax](https://developer.mozilla.org/en-US/docs/Web/API/Console/log) or the output format.
-
-This is what makes this library stand out from all the libraries that do color console output, because they can only apply
-colors to a simple text string, while this library focuses on keeping the output format exactly as Node.js does it for `console.log`. 
+This library focuses on providing consistent output format for console methods after changing the colors, in contrast to other colorization
+libraries that focus on setting colors to a simple string.
 
 ## Installing
 
@@ -36,11 +32,22 @@ $ npm install manakin --save
 
 ## Usage
 
+* Setting colors globally:
+
 ```js
 require('manakin').global; // set colors globally
 
 console.warn(val1, val2, ...); // yellow text output
 console.error(val1, val2, ...); // red text output
+```
+
+* Setting colors locally:
+
+```js
+var con = require('manakin').local; // use colors locally
+
+con.warn(val1, val2, ...); // yellow text output
+con.error(val1, val2, ...); // red text output
 ```
 
 See also: [Full API].
