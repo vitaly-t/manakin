@@ -49,10 +49,10 @@ con.warn(val1, val2, ...); // yellow text output
 con.error(val1, val2, ...); // red text output
 ```
 
-In addition, you can do the following:
+In addition, you can do the following, and in a very easy way:
 
 - change brightness individually for each available console method
-- create a custom-color method, with the same console output formatting   
+- create [custom-color methods](https://github.com/vitaly-t/manakin/blob/master/API.md#custom-methods), with the same console output formatting   
  
 For details, see [Full API].
 
