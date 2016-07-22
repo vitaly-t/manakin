@@ -13,14 +13,14 @@ Colors can be set either locally, or globally - for the `console` object.
 
 ---
 
-You can start using the existing `console.error` + `console.warn` methods, and then add `manakin` later, which will only change their output color, but never the format.
+You can use the existing `console.error` + `console.warn` methods as always, and then add `manakin` later, which will only change their output color, but never the format.
 
 <br/><br/>
 minimal code &#10004; no dependencies &#10004;
 
 <br/>
 
-This library focuses on providing consistent output format for console methods after changing the colors, in contrast to other colorization
+This library focuses on providing consistent output format for console methods after changing the colors, in contrast to generic colorization
 libraries that focus on setting colors to a simple string.
 
 ## Installing
@@ -49,7 +49,12 @@ con.warn(val1, val2, ...); // yellow text output
 con.error(val1, val2, ...); // red text output
 ```
 
-See also: [Full API].
+In addition, you can do the following:
+
+- change brightness individually for each available console method
+- create a custom-color method, with the same console output formatting   
+ 
+For details, see [Full API].
 
 ## License
 
