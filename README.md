@@ -22,8 +22,8 @@ _minimum code_ &#10004; _no dependencies_ &#10004;
 
 <br/>
 
-This library focuses on providing consistent output format for console methods after changing the colors, in contrast to generic color
-libraries that apply colors to a simple string.
+This library focuses on providing consistent output format for console methods after applying the colors, in contrast to generic color
+libraries that only apply colors to a simple string or value.
 
 ## Installing
 
@@ -36,7 +36,7 @@ $ npm install manakin --save
 #### Using colors globally:
 
 ```js
-require('manakin').global; // set colors globally
+require('manakin').global; // sets colors globally
 
 console.log(val1, val2, ...); // default text output
 console.warn(val1, val2, ...); // yellow text output
