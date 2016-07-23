@@ -13,7 +13,7 @@ and to continue using the rich syntax and the output format supported by Node.js
 &nbsp;&bull; `console.log(obj1 [, obj2, ..., objN]);`<br/>
 &nbsp;&bull; `console.log(msg [, subst1, ..., substN]);`
 
-Output will be colored according to which output method you use: `.log` - white, `.warn` - yellow, `.error` - red,
+Output will be colored according to which method you use: `.log` - white, `.warn` - yellow, `.error` - red,
 `.success` - green, `.info` - cyan.
 
 <br/>
