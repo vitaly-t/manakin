@@ -8,9 +8,6 @@ There are three ways in which the library can be used:
 
 See also: [Custom Methods].
 
-Note that unlike methods `warn` and `error`, if you do not set bright color for method `log`,
-it will redirect to the default implementation.
-
 ### global
 
 Overriding methods `log`, `warn`, `error` and `info` of the `console` object, plus adding

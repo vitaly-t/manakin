@@ -18,7 +18,7 @@ You can use all the existing console methods as usual, and then add `manakin` la
 
 <br/>
 
-_minimum code_ &#10004; _no dependencies_ &#10004;
+_minimum code_ &#10004;&nbsp;&nbsp;_no dependencies_ &#10004;
 
 <br/>
 
