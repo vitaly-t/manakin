@@ -5,7 +5,7 @@ manakin
 [![Coverage Status](https://coveralls.io/repos/vitaly-t/manakin/badge.svg?branch=master)](https://coveralls.io/r/vitaly-t/manakin?branch=master)
 [![Join the chat at https://gitter.im/vitaly-t/manakin](https://badges.gitter.im/vitaly-t/manakin.svg)](https://gitter.im/vitaly-t/manakin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-<img align="left" width="218" height="298" src="https://github.com/vitaly-t/manakin/tree/master/docs/manakin.jpg" alt="Wire-tailed manakin">
+![alt tag](docs/manakin.jpg)
 
 The quickest and safest way to set colorful output for your Node.js console, without messing with the colors at all,
 and to continue using the rich syntax and the output format supported by Node.js console methods:
