@@ -20,7 +20,7 @@ Output will be colored according to which output method you use: `.log` - white,
 
 _minimum code_ &#10004;&nbsp;&nbsp;_no dependencies_ &#10004;
 
-<br/><br/>
+<br/>
 
 This library focuses on providing consistent output format for console methods after applying the colors, in contrast to generic color
 libraries that only apply colors to a simple text string.
