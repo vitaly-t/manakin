@@ -9,8 +9,8 @@ manakin
 
 Errors + Warnings colorization, consistent with the rich syntax and the output format of console methods in Node.js:
 
-- `console.log(obj1 [, obj2, ..., objN]);`
-- `console.log(msg [, subst1, ..., substN]);`
+&nbsp;&bull; `console.log(obj1 [, obj2, ..., objN]);`<br/>
+&nbsp;&bull; `console.log(msg [, subst1, ..., substN]);`
 
 Colors can be set either locally, or globally - for the `console` object.
 
