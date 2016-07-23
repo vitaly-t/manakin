@@ -64,7 +64,7 @@ In addition, you can easily do the following:
  
 For more details, see [Full API].
 
-![alt tag](https://github.com/vitaly-t/manakin/tree/master/docs/console.jpg)
+![alt tag](docs/console.jpg)
 
 ## License
 
