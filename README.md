@@ -36,7 +36,7 @@ The exact Node.js syntax for console methods is supported:
 - `console.log(obj1 [, obj2, ..., objN]);`
 - `console.log(msg [, subst1, ..., substN]);`
 
-* Using colors globally:
+#### Using colors globally:
 
 ```js
 require('manakin').global; // set colors globally
@@ -45,7 +45,7 @@ console.warn(val1, val2, ...); // yellow text output
 console.error(val1, val2, ...); // red text output
 ```
 
-* Using colors locally:
+#### Using colors locally:
 
 ```js
 var con = require('manakin').local; // use colors locally
