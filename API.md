@@ -43,10 +43,10 @@ Using color output via a locally created object:
 var con = require('manakin').local; // returns a new local object {log, warn, error, success, info, write} 
 
 con.log(val1, val2, ...);  // redirects to the default implementation
-console.warn(val1, val2, ...);  // uses yellow color
-console.error(val1, val2, ...); // uses red color
-console.success(val1, val2, ...); // uses green color
-console.info(val1, val2, ...); // uses cyan color
+con.warn(val1, val2, ...);  // uses yellow color
+con.error(val1, val2, ...); // uses red color
+con.success(val1, val2, ...); // uses green color
+con.info(val1, val2, ...); // uses cyan color
 ```
 
 Setting bright colors:
@@ -71,8 +71,8 @@ var con = require('manakin'); // returns the shared/root object {log, warn, erro
 con.log(val1, val2, ...);  // redirects to the default implementation
 con.warn(val1, val2, ...);  // uses yellow color
 con.error(val1, val2, ...); // uses red color
-console.success(val1, val2, ...); // uses green color
-console.info(val1, val2, ...); // uses cyan color
+con.success(val1, val2, ...); // uses green color
+con.info(val1, val2, ...); // uses cyan color
 ```
 
 Setting bright colors for the module:
