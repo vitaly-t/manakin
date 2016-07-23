@@ -8,27 +8,17 @@ manakin
 <img align="left" width="218" height="298" src="https://s31.postimg.org/y3s1ucqor/manakin.jpg" alt="Wire-tailed manakin">
 
 The quickest and safest way to set colorful output for your Node.js console, without messing with the colors at all,
-to continue using the rich syntax and the output format of Node.js console methods:
+to continue using the rich syntax and the output format supported by Node.js console methods:
 
 &nbsp;&bull; `console.log(obj1 [, obj2, ..., objN]);`<br/>
 &nbsp;&bull; `console.log(msg [, subst1, ..., substN]);`
 
-And you can use all the existing console methods as usual, and then add `manakin` later, which will only change their output color,
-but never the format.
-
+<br/>
 <br/>
 
 _minimum code_ &#10004;&nbsp;&nbsp;_no dependencies_ &#10004;
 
 <br/>
-
-Colors can be set either locally, or globally - for the `console` object, with methods as follows:
-
-&nbsp;&bull;`.log` - standard message (white)<br/>
-&nbsp;&bull;`.warn` - warning (yellow)<br/>
-&nbsp;&bull;`.error` - error message (red)<br/>
-&nbsp;&bull;`.success` - success message (green)<br/>
-&nbsp;&bull;`.info` - information message (cyan)<br/>
 
 This library focuses on providing consistent output format for console methods after applying the colors, in contrast to generic color
 libraries that only apply colors to a simple string or value.
