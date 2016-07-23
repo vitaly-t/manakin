@@ -13,14 +13,6 @@ to continue using the rich syntax and the output format of Node.js console metho
 &nbsp;&bull; `console.log(obj1 [, obj2, ..., objN]);`<br/>
 &nbsp;&bull; `console.log(msg [, subst1, ..., substN]);`
 
-Colors can be set either locally, or globally - for the `console` object, with methods as follows:
-
-&nbsp;&bull;`.log` - standard message (white)<br/>
-&nbsp;&bull;`.warn` - warning (yellow)<br/>
-&nbsp;&bull;`.error` - error message (red)<br/>
-&nbsp;&bull;`.success` - success message (green)<br/>
-&nbsp;&bull;`.info` - information message (cyan)<br/>
-
 And you can use all the existing console methods as usual, and then add `manakin` later, which will only change their output color,
 but never the format.
 
@@ -29,6 +21,14 @@ but never the format.
 _minimum code_ &#10004;&nbsp;&nbsp;_no dependencies_ &#10004;
 
 <br/>
+
+Colors can be set either locally, or globally - for the `console` object, with methods as follows:
+
+&nbsp;&bull;`.log` - standard message (white)<br/>
+&nbsp;&bull;`.warn` - warning (yellow)<br/>
+&nbsp;&bull;`.error` - error message (red)<br/>
+&nbsp;&bull;`.success` - success message (green)<br/>
+&nbsp;&bull;`.info` - information message (cyan)<br/>
 
 This library focuses on providing consistent output format for console methods after applying the colors, in contrast to generic color
 libraries that only apply colors to a simple string or value.
