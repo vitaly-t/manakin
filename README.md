@@ -7,7 +7,10 @@ manakin
 
 <img align="left" width="218" height="298" src="https://s31.postimg.org/y3s1ucqor/manakin.jpg" alt="Wire-tailed manakin">
 
-Errors + Warnings colorization, consistent with the rich syntax and the output format of console methods in Node.js.
+Errors + Warnings colorization, consistent with the rich syntax and the output format of console methods in Node.js:
+
+- `console.log(obj1 [, obj2, ..., objN]);`
+- `console.log(msg [, subst1, ..., substN]);`
 
 Colors can be set either locally, or globally - for the `console` object.
 
@@ -15,7 +18,6 @@ Colors can be set either locally, or globally - for the `console` object.
 
 You can use the existing `console.error` + `console.warn` methods as always, and then add `manakin` later, which will only change their output color, but never the format.
 
-<br/><br/>
 minimal code &#10004; no dependencies &#10004;
 
 <br/>
@@ -31,16 +33,12 @@ $ npm install manakin --save
 
 ## Usage
 
-The exact Node.js syntax for console methods is supported:
-
-- `console.log(obj1 [, obj2, ..., objN]);`
-- `console.log(msg [, subst1, ..., substN]);`
-
 #### Using colors globally:
 
 ```js
 require('manakin').global; // set colors globally
 
+console.log(val1, val2, ...); // default text output
 console.warn(val1, val2, ...); // yellow text output
 console.error(val1, val2, ...); // red text output
 ```
@@ -50,6 +48,7 @@ console.error(val1, val2, ...); // red text output
 ```js
 var con = require('manakin').local; // use colors locally
 
+con.log(val1, val2, ...); // default text output
 con.warn(val1, val2, ...); // yellow text output
 con.error(val1, val2, ...); // red text output
 ```
