@@ -33,7 +33,7 @@ $ npm install manakin --save
 
 ## Usage
 
-#### Using colors globally:
+#### Using colors globally
 
 ```js
 require('manakin').global; // sets colors globally
@@ -44,7 +44,7 @@ console.success(val1, val2, ...); // green text output
 console.info(val1, val2, ...); // cyan text output
 ```
 
-#### Using colors locally:
+#### Using colors locally
 
 ```js
 var con = require('manakin').local; // use colors locally
