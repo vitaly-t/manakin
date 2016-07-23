@@ -13,7 +13,7 @@ and to continue using the rich syntax and the output format supported by Node.js
 &nbsp;&bull; with a list of parameters: `console.log(obj1 [, obj2, ..., objN]);`<br/>
 &nbsp;&bull; with message formatting: `console.log(msg [, subst1, ..., substN]);`
 
-Can be used either locally or globally (by overriding the `console` object), and with colors according to which
+Can be used either locally or globally (by overriding the `console` object), with automatic colors according to which
 method is used - see [the example](#output-example).   
 
 <br/>
