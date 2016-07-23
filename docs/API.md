@@ -2,7 +2,7 @@
 
 There are three ways in which the library can be used:
 
-* [global] - overrides methods `log`, `warn` and `error` of the `console` object  
+* [global] - overrides and extends methods of the `console` object  
 * [local] - creates a new object for local usage, without any global changes 
 * [shared] - reuses the same, module-wide object
 
