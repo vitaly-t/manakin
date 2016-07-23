@@ -64,7 +64,7 @@ In addition, you can easily do the following:
  
 For more details, see [Full API].
 
----
+#### Output example
 
 <img width="554" height="360" src="https://raw.githubusercontent.com/vitaly-t/manakin/master/docs/console.jpg" alt="Console output colors">
 
