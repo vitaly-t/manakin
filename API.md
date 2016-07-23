@@ -13,7 +13,8 @@ it will redirect to the default implementation.
 
 ### global
 
-Overriding methods `log`, `warn` and `error` of the `console` object:
+Overriding methods `log`, `warn`, `error` and `info` of the `console` object, plus adding
+custom method `success`:
 
 ```js
 require('manakin').global;
@@ -21,16 +22,20 @@ require('manakin').global;
 console.log(val1, val2, ...);   // redirects to the default implementation 
 console.warn(val1, val2, ...);  // uses yellow color
 console.error(val1, val2, ...); // uses red color
+console.success(val1, val2, ...); // uses green color
+console.info(val1, val2, ...); // uses cyan color
 ```
 
 Setting bright colors:
 
 ```js
-var con = require('manakin').global; // returns global {log, warn, error, write}
+var con = require('manakin').global; // returns global object {log, warn, error, success, info, write}
 
 con.log.bright = true; // use bright white for `console.log`
 con.warn.bright = true; // use bright yellow for `console.warn`
 con.error.bright = true; // use bright red for `console.error`
+con.success.bright = true; // use bright green for `console.success`
+con.info.bright = true; // use bright cyan for `console.info`
 ```
 
 ### local
@@ -38,11 +43,13 @@ con.error.bright = true; // use bright red for `console.error`
 Using color output via a locally created object:
 
 ```js
-var con = require('manakin').local; // returns a new local object {log, warn, error, write} 
+var con = require('manakin').local; // returns a new local object {log, warn, error, success, info, write} 
 
 con.log(val1, val2, ...);  // redirects to the default implementation
-con.warn(val1, val2, ...);  // uses yellow color
-con.error(val1, val2, ...); // uses red color
+console.warn(val1, val2, ...);  // uses yellow color
+console.error(val1, val2, ...); // uses red color
+console.success(val1, val2, ...); // uses green color
+console.info(val1, val2, ...); // uses cyan color
 ```
 
 Setting bright colors:
@@ -53,6 +60,8 @@ var con = require('manakin').local;
 con.log.bright = true; // use bright white for `con.log`
 con.warn.bright = true; // use bright yellow for `con.warn`
 con.error.bright = true; // use bright red for `con.error`
+con.success.bright = true; // use bright green for `con.success`
+con.info.bright = true; // use bright cyan for `con.info`
 ```
 
 ### shared
@@ -60,11 +69,13 @@ con.error.bright = true; // use bright red for `con.error`
 Using color output with the module-wide object:
 
 ```js
-var con = require('manakin'); // returns the shared/root object {log, warn, error, write} 
+var con = require('manakin'); // returns the shared/root object {log, warn, error, etc...} 
 
 con.log(val1, val2, ...);  // redirects to the default implementation
 con.warn(val1, val2, ...);  // uses yellow color
 con.error(val1, val2, ...); // uses red color
+console.success(val1, val2, ...); // uses green color
+console.info(val1, val2, ...); // uses cyan color
 ```
 
 Setting bright colors for the module:
@@ -75,6 +86,8 @@ var con = require('manakin');
 con.log.bright = true; // use bright white for `con.log`
 con.warn.bright = true; // use bright yellow for `con.warn`
 con.error.bright = true; // use bright red for `con.error`
+con.success.bright = true; // use bright green for `con.success`
+con.info.bright = true; // use bright cyan for `con.info`
 ```
 
 Unlike [local](#local), setting brightness for a shared object once is sufficient.
