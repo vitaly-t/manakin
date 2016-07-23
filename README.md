@@ -14,11 +14,11 @@ Errors + Warnings colorization, consistent with the rich syntax and the output f
 
 Colors can be set either locally, or globally - for the `console` object.
 
----
-
 You can use the existing `console.error` + `console.warn` methods as always, and then add `manakin` later, which will only change their output color, but never the format.
 
-minimum code &#10004; no dependencies &#10004;
+<br/>
+
+_minimum code_ &#10004; _no dependencies_ &#10004;
 
 <br/>
 
