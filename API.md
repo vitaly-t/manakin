@@ -4,7 +4,7 @@ There are three ways in which the library can be used:
 
 * [global] - overrides methods `log`, `warn` and `error` of the `console` object  
 * [local] - creates a new object for local usage, without any global changes 
-* [shared] - uses the same, module-wide object
+* [shared] - reuses the same, module-wide object
 
 See also: [Custom Methods].
 
@@ -76,6 +76,8 @@ con.log.bright = true; // use bright white for `con.log`
 con.warn.bright = true; // use bright yellow for `con.warn`
 con.error.bright = true; // use bright red for `con.error`
 ```
+
+Unlike [local](#local), setting brightness for a shared object once is sufficient.
 
 ## Custom Methods
 
