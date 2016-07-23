@@ -13,8 +13,8 @@ and to continue using the rich syntax and the output format supported by Node.js
 &nbsp;&bull; with list of parameters: `console.log(obj1 [, obj2, ..., objN]);`<br/>
 &nbsp;&bull; with message formatting: `console.log(msg [, subst1, ..., substN]);`
 
-Output will be colored according to which method you use: `.log` - white, `.warn` - yellow, `.error` - red,
-`.success` - green, `.info` - cyan.
+Can be used either locally or globally (by overriding `console`), and with colors according to which
+method is used - see [the example](#output-example).   
 
 <br/>
 
