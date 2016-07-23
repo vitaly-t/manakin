@@ -33,6 +33,9 @@ con.warn.bright = true; // use bright yellow for `console.warn`
 con.error.bright = true; // use bright red for `console.error`
 con.success.bright = true; // use bright green for `console.success`
 con.info.bright = true; // use bright cyan for `console.info`
+
+// or for all colors at once:
+con.setBright(); // takes optional boolean (undefined=true)
 ```
 
 ### local
@@ -59,6 +62,9 @@ con.warn.bright = true; // use bright yellow for `con.warn`
 con.error.bright = true; // use bright red for `con.error`
 con.success.bright = true; // use bright green for `con.success`
 con.info.bright = true; // use bright cyan for `con.info`
+
+// or for all colors at once:
+con.setBright(); // takes optional boolean (undefined=true)
 ```
 
 ### shared
@@ -85,6 +91,9 @@ con.warn.bright = true; // use bright yellow for `con.warn`
 con.error.bright = true; // use bright red for `con.error`
 con.success.bright = true; // use bright green for `con.success`
 con.info.bright = true; // use bright cyan for `con.info`
+
+// or for all colors at once:
+con.setBright(); // takes optional boolean (undefined=true)
 ```
 
 Unlike [local](#local), setting brightness for a shared object once is sufficient.

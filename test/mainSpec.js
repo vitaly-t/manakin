@@ -6,15 +6,15 @@ var capture = require('./capture');
 describe("protocol", function () {
 
     it("must expose complete protocol from the root", function () {
-        expect(Object.keys(lib)).toEqual(['log', 'error', 'warn', 'info', 'success', 'write', 'local', 'global']);
+        expect(Object.keys(lib)).toEqual(['log', 'error', 'warn', 'info', 'success', 'write', 'setBright', 'local', 'global']);
     });
 
     it("must expose main methods from local", function () {
-        expect(Object.keys(lib.local)).toEqual(['log', 'error', 'warn', 'info', 'success', 'write']);
+        expect(Object.keys(lib.local)).toEqual(['log', 'error', 'warn', 'info', 'success', 'write', 'setBright']);
     });
 
     it("must expose main methods from global", function () {
-        expect(Object.keys(lib.global)).toEqual(['log', 'error', 'warn', 'info', 'success', 'write']);
+        expect(Object.keys(lib.global)).toEqual(['log', 'error', 'warn', 'info', 'success', 'write', 'setBright']);
     });
 
 });
@@ -95,11 +95,8 @@ describe("formatting", function () {
 describe("bright colors", function () {
 
     var con1 = lib.local, con2 = lib.local, values = ['some\ntext'];
-    con1.log.bright = true;
-    con1.warn.bright = true;
-    con1.error.bright = true;
-    con1.success.bright = true;
-    con1.info.bright = true;
+
+    con1.setBright();
 
     it("must change the colors", function () {
         var log1 = capture.call(con1, con1.log, values, true),
@@ -125,11 +122,7 @@ describe("global", function () {
 
     var glb = lib.global, loc = lib.local, values = ['some\ntext'];
 
-    loc.log.bright = true;
-    loc.warn.bright = true;
-    loc.error.bright = true;
-    loc.success.bright = true;
-    loc.info.bright = true;
+    loc.setBright(true);
 
     it("must change the colors", function () {
         var log1 = capture.call(loc, loc.log, values, true),
