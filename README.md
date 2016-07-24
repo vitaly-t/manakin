@@ -57,7 +57,9 @@ con.success(val1, val2, ...); // green text output
 con.info(val1, val2, ...); // cyan text output
 ```
 
-In addition, you can easily do the following:
+#### Customization Features
+
+You can easily do the following:
 
 - change brightness individually for each available method
 - [override predefined colors](https://github.com/vitaly-t/manakin/blob/master/docs/API.md#override-colors) for existing methods
