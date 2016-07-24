@@ -73,4 +73,4 @@ For more details, see [the full API].
 Copyright © 2016 [Vitaly Tomilov](https://github.com/vitaly-t);
 Released under the MIT license.
 
-[Full API]:https://github.com/vitaly-t/manakin/tree/master/docs/API.md
+[the full API]:https://github.com/vitaly-t/manakin/tree/master/docs/API.md
