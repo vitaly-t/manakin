@@ -6,7 +6,7 @@ There are three ways in which the library can be used:
 * [local] - creates a new object for local usage, without any global changes 
 * [shared] - reuses the same, module-wide object
 
-See also: [Custom Methods].
+See also: [Overriding Colors] and [Custom Methods].
 
 ### global
 
@@ -28,7 +28,6 @@ Setting bright colors:
 ```js
 var con = require('manakin').global; // returns global object {log, warn, error, success, info, write}
 
-con.log.bright = true; // use bright white for `console.log`
 con.warn.bright = true; // use bright yellow for `console.warn`
 con.error.bright = true; // use bright red for `console.error`
 con.success.bright = true; // use bright green for `console.success`
@@ -98,6 +97,17 @@ con.setBright(); // takes optional boolean (undefined=true)
 
 Unlike [local](#local), setting brightness for a shared object once is sufficient.
 
+## Overriding Colors
+
+You can override any predefined color with your own, by setting property `color` on the method:
+
+```js
+con.warn.color = 35; // use Magenta for warnings
+```
+
+Once you set a valid `color` (0 <= `color` <= 256), it will be used in place of the predefined one,
+while property `bright` will be ignored.
+
 ## Custom Methods
 
 You can implement your own methods with the output format consistent with that of the console methods,
@@ -127,6 +137,7 @@ The color code can also represent brightness and the background color. For examp
 [&lt;&lt; Main Page](https://github.com/vitaly-t/manakin)
 
 [color codes]:http://misc.flogisoft.com/bash/tip_colors_and_formatting#colors
+[Overriding Colors]:#overriding-colors
 [Custom Methods]:#custom-methods
 [global]:#global  
 [local]:#local

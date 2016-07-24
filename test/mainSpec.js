@@ -122,6 +122,8 @@ describe("global", function () {
 
     var glb = lib.global, loc = lib.local, values = ['some\ntext'];
 
+    loc.warn.color = 35; // just for coverage;
+
     loc.setBright(true);
 
     it("must change the colors", function () {
