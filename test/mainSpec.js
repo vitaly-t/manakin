@@ -153,3 +153,33 @@ describe("global", function () {
     console.success();
     console.info();
 });
+
+describe("method write", function () {
+    var loc = lib.local, values = ['some\ntext'];
+    describe("for stdout", function () {
+
+        var print = function () {
+            loc.write(arguments, 32);
+        };
+
+        it("must produce the same result", function () {
+            var resSuccess = capture.call(loc, loc.success, values, true),
+                resPrint = capture.call(loc, print, values, true);
+
+            expect(resSuccess === resPrint).toBe(true);
+        });
+    });
+
+    describe("for stderr", function () {
+        var print = function () {
+            loc.write(arguments, 31, true);
+        };
+
+        it("must produce the same result", function () {
+            var resError = capture.call(loc, loc.error, values, true),
+                resPrint = capture.call(loc, print, values, true);
+
+            expect(resError === resPrint).toBe(true);
+        });
+    });
+});

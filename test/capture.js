@@ -4,22 +4,27 @@ var util = require('util');
 
 function hookConsole(callback) {
 
-    var std = process.stdout, old_write = std.write;
+    var stdout = process.stdout,
+        stderr = process.stderr,
+        oldOutWrite = stdout.write,
+        oldErrWrite = stderr.write;
 
-    std.write = (function () {
+    stdout.write = (function () {
         return function (string) {
             callback(string);
         }
-    })(std.write);
+    })(stdout.write);
+
+    stderr.write = (function () {
+        return function (string) {
+            callback(string);
+        }
+    })(stderr.write);
 
     return function () {
-        std.write = old_write;
+        stdout.write = oldOutWrite;
+        stderr.write = oldErrWrite;
     }
-}
-
-// removes color elements from text;
-function removeColors(text) {
-    return text.replace(/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]/g, '');
 }
 
 function capture(method, values, keepColors, param) {
@@ -33,6 +38,11 @@ function capture(method, values, keepColors, param) {
     }
     hook();
     return keepColors ? text : removeColors(text);
+}
+
+// removes color elements from text;
+function removeColors(text) {
+    return text.replace(/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]/g, '');
 }
 
 module.exports = capture;

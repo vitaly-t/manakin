@@ -100,13 +100,14 @@ Unlike [local](#local), setting brightness for a shared object once is sufficien
 
 ## Custom Methods
 
-You can implement your own methods with the input-output format consistent with that of the console methods,
+You can implement your own methods with the output format consistent with that of the console methods,
 by using method `write`, which you get with any `require('manakin')` (with `global`, `local` or without).
 
-The method takes two parameters:
+The method takes three parameters:
 
-* list of function arguments
-* standard color code - an integer between 0 and 256 
+* _required:_ list of function arguments
+* _required:_ standard color code - an integer between 0 and 256
+* _optional:_ `false` (default) - write into `stdout`, `true` - write into `stderr`.
 
 If no valid color is specified, the method redirects to the default `console.log`
 
@@ -114,7 +115,7 @@ If no valid color is specified, the method redirects to the default `console.log
 var con = require('manakin');
 
 function print() {
-    con.write(arguments, 35); // writes using Magenta color
+    con.write(arguments, 35); // writes into stdout, using Magenta color
 }
 
 print('Color is: %s', 'Magenta');
