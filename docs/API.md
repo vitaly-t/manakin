@@ -105,9 +105,9 @@ by using method `write`, which you get with any `require('manakin')` (with `glob
 
 The method takes three parameters:
 
-* _required:_ list of function arguments
-* _required:_ standard color code - an integer between 0 and 256
-* _optional:_ `false` (default) - write into `stdout`, `true` - write into `stderr`.
+* _values_: list of function arguments
+* _color_: standard color code - an integer between 0 and 256
+* _[isError]_: `false` (default) - write into `stdout`, `true` - write into `stderr`.
 
 If no valid color is specified, the method redirects to the default `console.log`
 

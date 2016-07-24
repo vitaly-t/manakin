@@ -14,7 +14,7 @@ and to continue using the rich syntax and the output format supported by Node.js
 &nbsp;&bull; with message formatting: `console.log(msg [, subst1, ..., substN]);`
 
 Can be used either locally or globally (by overriding the `console` object), with automatic colors applied according to which
-method is used - see [the example](#output-example).   
+method is used - see [the output example](#output-example).   
 
 <br/>
 
@@ -23,7 +23,7 @@ _minimum code_ &#10004;&nbsp;&nbsp;_no dependencies_ &#10004;
 <br/>
 
 This library focuses on providing consistent output format for console methods after applying the colors, in contrast to generic color
-libraries that only apply colors to simple text strings.
+libraries that only apply colors to text.
 
 ## Installing
 
@@ -62,7 +62,7 @@ In addition, you can easily do the following:
 - change brightness individually for each available method
 - create [custom-color methods](https://github.com/vitaly-t/manakin/blob/master/docs/API.md#custom-methods), with the same output formatting   
  
-For more details, see [Full API].
+For more details, see [the full API].
 
 #### Output example
 
