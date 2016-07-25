@@ -62,7 +62,7 @@ con.info(val1, val2, ...); // cyan text output
 You can easily do the following:
 
 - change brightness individually for each available method
-- [override predefined colors](https://github.com/vitaly-t/manakin/blob/master/docs/API.md#override-colors) for existing methods
+- [override predefined colors](https://github.com/vitaly-t/manakin/blob/master/docs/API.md#overriding-colors) for existing methods
 - create [custom-color methods](https://github.com/vitaly-t/manakin/blob/master/docs/API.md#custom-methods), with the same output formatting   
 
 For more details, see [the full API].
