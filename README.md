@@ -3,6 +3,7 @@ manakin
 
 [![Build Status](https://travis-ci.org/vitaly-t/manakin.svg?branch=master)](https://travis-ci.org/vitaly-t/manakin)
 [![Coverage Status](https://coveralls.io/repos/vitaly-t/manakin/badge.svg?branch=master)](https://coveralls.io/r/vitaly-t/manakin?branch=master)
+[![Downloads Count](http://img.shields.io/npm/dm/manakin.svg)](https://www.npmjs.com/package/manakin)
 [![Join the chat at https://gitter.im/vitaly-t/manakin](https://badges.gitter.im/vitaly-t/manakin.svg)](https://gitter.im/vitaly-t/manakin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <img align="left" width="218" height="298" src="https://raw.githubusercontent.com/vitaly-t/manakin/master/docs/manakin.jpg" alt="Wire-tailed manakin">
