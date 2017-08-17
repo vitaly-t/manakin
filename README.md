@@ -44,8 +44,9 @@ require('manakin').global; // sets colors globally, for the `console` object
 console.log(val1, val2, ...); // white/default text output
 console.warn(val1, val2, ...); // yellow text output
 console.error(val1, val2, ...); // red text output
-console.success(val1, val2, ...); // green text output (custom method)
 console.info(val1, val2, ...); // cyan text output
+console.success(val1, val2, ...); // green text output (custom method)
+console.ok(val1, val2, ...); // green text output (custom method)
 ```
 
 #### Using colors locally
@@ -56,8 +57,9 @@ var con = require('manakin').local; // use colors locally
 con.log(val1, val2, ...); // white/default text output
 con.warn(val1, val2, ...); // yellow text output
 con.error(val1, val2, ...); // red text output
-con.success(val1, val2, ...); // green text output (custom method)
 con.info(val1, val2, ...); // cyan text output
+con.success(val1, val2, ...); // green text output (custom method)
+con.ok(val1, val2, ...); // green text output (custom method)
 ```
 
 #### Customization Features
