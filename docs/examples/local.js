@@ -2,7 +2,7 @@
 
 var con = require('manakin').local;
 
-con.warn.bright = true; // use bright color for all warnings that use 'con' object
+con.warn.bright = true; // use bright yellow color for all warnings that use 'con' object
 
 con.log('This message is regular white');
 
