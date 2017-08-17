@@ -1,7 +1,5 @@
 'use strict';
 
-var util = require('util');
-
 function hookConsole(callback) {
 
     var stdout = process.stdout,
@@ -12,19 +10,19 @@ function hookConsole(callback) {
     stdout.write = (function () {
         return function (string) {
             callback(string);
-        }
+        };
     })(stdout.write);
 
     stderr.write = (function () {
         return function (string) {
             callback(string);
-        }
+        };
     })(stderr.write);
 
     return function () {
         stdout.write = oldOutWrite;
         stderr.write = oldErrWrite;
-    }
+    };
 }
 
 function capture(method, values, keepColors, param) {
