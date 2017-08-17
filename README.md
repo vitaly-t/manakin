@@ -26,7 +26,7 @@ _minimum code_ &#10004;&nbsp;&nbsp;_no dependencies_ &#10004;
 This library focuses on providing consistent output format for console methods after applying the colors, in contrast to generic color
 libraries that only apply colors to text.
 
-<img width="619" height="362" src="https://raw.githubusercontent.com/vitaly-t/manakin/master/docs/console.jpg" alt="Console output colors">
+<img width="738" height="350" src="https://raw.githubusercontent.com/vitaly-t/manakin/master/docs/console.jpg" alt="Console output colors">
 
 ## Installing
 
