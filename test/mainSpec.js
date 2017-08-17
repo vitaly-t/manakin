@@ -5,16 +5,19 @@ var capture = require('./capture');
 
 describe('protocol', function () {
 
+    var rootProps = ['log', 'error', 'warn', 'info', 'success', 'ok', 'write', 'setBright', 'local', 'global'];
+    var localProps = ['log', 'error', 'warn', 'info', 'success', 'ok', 'write', 'setBright'];
+
     it('must expose complete protocol from the root', function () {
-        expect(Object.keys(lib)).toEqual(['log', 'error', 'warn', 'info', 'success', 'write', 'setBright', 'local', 'global']);
+        expect(Object.keys(lib)).toEqual(rootProps);
     });
 
     it('must expose main methods from local', function () {
-        expect(Object.keys(lib.local)).toEqual(['log', 'error', 'warn', 'info', 'success', 'write', 'setBright']);
+        expect(Object.keys(lib.local)).toEqual(localProps);
     });
 
     it('must expose main methods from global', function () {
-        expect(Object.keys(lib.global)).toEqual(['log', 'error', 'warn', 'info', 'success', 'write', 'setBright']);
+        expect(Object.keys(lib.global)).toEqual(localProps);
     });
 
 });
@@ -51,12 +54,14 @@ describe('formatting', function () {
                 var warning = capture(lib.warn, values);
                 var error = capture(lib.error, values);
                 var success = capture(lib.success, values);
+                var ok = capture(lib.ok, values);
                 var info = capture(lib.info, values);
                 var write = capture(lib.write, values, false, 'invalid');
                 expect(log).toBe(original);
                 expect(warning).toBe(original);
                 expect(error).toBe(original);
                 expect(success).toBe(original);
+                expect(ok).toBe(original);
                 expect(info).toBe(original);
                 expect(write).toBe(original);
             });
@@ -79,12 +84,14 @@ describe('formatting', function () {
             var warning = capture(lib.warn, ['hello']);
             var error = capture(lib.error, ['hello']);
             var success = capture(lib.success, ['hello']);
+            var ok = capture(lib.ok, ['hello']);
             var info = capture(lib.info, ['hello']);
             var write = capture(lib.write, ['hello'], false, 'invalid');
             expect(log).toBe(original);
             expect(warning).toBe(original);
             expect(error).toBe(original);
             expect(success).toBe(original);
+            expect(ok).toBe(original);
             expect(info).toBe(original);
             expect(write).toBe(original);
         });
@@ -107,6 +114,8 @@ describe('bright colors', function () {
             error2 = capture.call(con2, con2.error, values, true),
             success1 = capture.call(con1, con1.success, values, true),
             success2 = capture.call(con2, con2.success, values, true),
+            ok1 = capture.call(con1, con1.ok, values, true),
+            ok2 = capture.call(con2, con2.ok, values, true),
             info1 = capture.call(con1, con1.info, values, true),
             info2 = capture.call(con2, con2.info, values, true);
 
@@ -114,6 +123,7 @@ describe('bright colors', function () {
         expect(warn1 === warn2).toBe(false);
         expect(error1 === error2).toBe(false);
         expect(success1 === success2).toBe(false);
+        expect(ok1 === ok2).toBe(false);
         expect(info1 === info2).toBe(false);
     });
 });
@@ -135,6 +145,8 @@ describe('global', function () {
             error2 = capture(glb.error, values, true),
             success1 = capture.call(loc, loc.success, values, true),
             success2 = capture(glb.success, values, true),
+            ok1 = capture.call(loc, loc.ok, values, true),
+            ok2 = capture(glb.ok, values, true),
             info1 = capture.call(loc, loc.info, values, true),
             info2 = capture(glb.info, values, true),
             write1 = capture(glb.write, values, true, 'invalid'),
@@ -144,6 +156,7 @@ describe('global', function () {
         expect(warn1 === warn2).toBe(false);
         expect(error1 === error2).toBe(false);
         expect(success1 === success2).toBe(false);
+        expect(ok1 === ok2).toBe(false);
         expect(info1 === info2).toBe(false);
         expect(write1 === write2).toBe(false);
     });
@@ -153,6 +166,7 @@ describe('global', function () {
     console.warn();
     console.error();
     console.success();
+    console.ok();
     console.info();
 });
 
