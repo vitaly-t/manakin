@@ -37,7 +37,6 @@ con.info.bright = true; // use bright cyan for `console.info`
 con.success.bright = true; // use bright green for `console.success`
 con.ok.bright = true; // use bright green for `console.ok`
 
-
 // or for all colors at once:
 con.setBright(); // takes optional boolean (undefined=true)
 ```
