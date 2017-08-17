@@ -15,7 +15,7 @@ and to continue using the rich syntax and the output format supported by Node.js
 &nbsp;&bull; with message formatting: `console.log(msg [, subst1, ..., substN]);`
 
 Can be used either locally or globally (by overriding the `console` object), with automatic colors applied according to which
-method is used - see [the output example](#output-example).   
+method is used - see the screenshot below.   
 
 <br/>
 
@@ -44,7 +44,7 @@ require('manakin').global; // sets colors globally, for the `console` object
 console.log(val1, val2, ...); // white/default text output
 console.warn(val1, val2, ...); // yellow text output
 console.error(val1, val2, ...); // red text output
-console.success(val1, val2, ...); // green text output
+console.success(val1, val2, ...); // green text output (custom method)
 console.info(val1, val2, ...); // cyan text output
 ```
 
@@ -56,7 +56,7 @@ var con = require('manakin').local; // use colors locally
 con.log(val1, val2, ...); // white/default text output
 con.warn(val1, val2, ...); // yellow text output
 con.error(val1, val2, ...); // red text output
-con.success(val1, val2, ...); // green text output
+con.success(val1, val2, ...); // green text output (custom method)
 con.info(val1, val2, ...); // cyan text output
 ```
 
