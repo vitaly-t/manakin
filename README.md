@@ -8,7 +8,7 @@ manakin
 
 <img align="left" width="218" height="298" src="https://raw.githubusercontent.com/vitaly-t/manakin/master/docs/manakin.jpg" alt="Wire-tailed manakin">
 
-The quickest and safest way to set colorful output for your Node.js console, without messing with the colors at all,
+The quickest and safest way to set default colorful output for your Node.js console, without messing with the colors,
 and to continue using the rich syntax and the output format supported by Node.js console methods:
 
 &nbsp;&bull; with a list of parameters: `console.log(obj1 [, obj2, ..., objN]);`<br/>
@@ -23,7 +23,7 @@ _minimum code_ &#10004;&nbsp;&nbsp;_no dependencies_ &#10004;
 
 <br/>
 
-This library focuses on providing consistent output format for console methods after applying the colors, in contrast to generic color
+This library provides consistent output format for console methods after applying the colors, in contrast to generic color
 libraries that only apply colors to text.
 
 <img width="639" height="402" src="https://raw.githubusercontent.com/vitaly-t/manakin/master/docs/console.jpg" alt="Console output colors">
@@ -70,7 +70,7 @@ You can easily do the following:
 - [override predefined colors](https://github.com/vitaly-t/manakin/blob/master/docs/API.md#overriding-colors) for existing methods
 - create [custom-color methods](https://github.com/vitaly-t/manakin/blob/master/docs/API.md#custom-methods), with the same output formatting   
 
-For more details, see [the full API].
+For more details and examples, see [the full API] and [examples].
 
 ## License
 
@@ -78,3 +78,5 @@ Copyright © 2017 [Vitaly Tomilov](https://github.com/vitaly-t);
 Released under the MIT license.
 
 [the full API]:https://github.com/vitaly-t/manakin/tree/master/docs/API.md
+[examples]:https://github.com/vitaly-t/manakin/tree/master/docs/examples
+
