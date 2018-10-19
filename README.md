@@ -74,7 +74,7 @@ For more details and examples, see [the full API] and [examples].
 
 ## License
 
-Copyright © 2017 [Vitaly Tomilov](https://github.com/vitaly-t);
+Copyright © 2018 [Vitaly Tomilov](https://github.com/vitaly-t);
 Released under the MIT license.
 
 [the full API]:https://github.com/vitaly-t/manakin/tree/master/docs/API.md
