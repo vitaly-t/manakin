@@ -1,6 +1,6 @@
 {
   "name": "manakin",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Prime colors for your console",
   "main": "lib/index.js",
   "scripts": {
@@ -32,13 +32,13 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=0.10",
+    "node": ">=0.12",
     "npm": ">=1.4"
   },
   "devDependencies": {
-    "coveralls": "~2.13.1",
-    "eslint": "~4.4.1",
-    "istanbul": "~0.4.5",
-    "jasmine-node": "~1.14.5"
+    "coveralls": "3.0.2",
+    "eslint": "5.7.0",
+    "istanbul": "0.4.5",
+    "jasmine-node": "1.16.2"
   }
 }
